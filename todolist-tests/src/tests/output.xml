@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-20T20:03:22.771433" rpa="false" schemaversion="5">
+<suite id="s1" name="TodoListAssignment2" source="C:\Users\yasin\Desktop\Ohjelmistotestaus\todolist-master\src\tests\TodoListAssignment2.robot">
+<test id="s1-t1" name="Adding a Single Item" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:22.949855" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:22.949649" elapsed="2.631322"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:25.600363" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.581893" elapsed="0.018570"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.581539" elapsed="0.019042"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:25.601269" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.601003" elapsed="0.198808"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:25.800205" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.800063" elapsed="0.081522"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:25.881982" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.881826" elapsed="0.106349"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:26.002779" level="INFO">Current page contains text 'Sample task 1'.</msg>
+<arg>Sample task 1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:25.988507" elapsed="0.014343"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:26.018579" level="INFO">Current page contains text '20.11.2024'.</msg>
+<arg>20.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:26.003080" elapsed="0.015597"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-20T20:03:26.018994" elapsed="2.100188"/>
+</kw>
+<doc>Test adding a single item to the Todo list and verify it appears in the list.</doc>
+<status status="PASS" start="2024-11-20T20:03:22.948963" elapsed="5.170564"/>
+</test>
+<test id="s1-t2" name="Adding Multiple Items" line="24">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:28.120916" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:28.120643" elapsed="2.588094"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:30.727979" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:30.709205" elapsed="0.018859"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:30.709006" elapsed="0.019159"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:30.728559" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:30.728419" elapsed="0.141228"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:30.870101" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:30.869927" elapsed="0.082175"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:30.952525" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:30.952382" elapsed="0.110853"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.081093" level="INFO">Current page contains text 'Sample task 1'.</msg>
+<arg>Sample task 1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.063509" elapsed="0.017674"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.092921" level="INFO">Current page contains text '20.11.2024'.</msg>
+<arg>20.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.081405" elapsed="0.011597"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.093500" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.093290" elapsed="0.182287"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.276062" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.275854" elapsed="0.131732"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.408014" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.407891" elapsed="0.121005"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.558182" level="INFO">Current page contains text 'Sample task 2'.</msg>
+<arg>Sample task 2</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.529131" elapsed="0.029119"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:31.577666" level="INFO">Current page contains text '22.11.2024'.</msg>
+<arg>22.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.558483" elapsed="0.019276"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-20T20:03:31.578032" elapsed="2.101677"/>
+</kw>
+<doc>Test adding multiple items to the Todo list and verify they appear correctly.</doc>
+<status status="PASS" start="2024-11-20T20:03:28.120198" elapsed="5.559806"/>
+</test>
+<test id="s1-t3" name="Task Count Validation" line="46">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:33.681444" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:33.681294" elapsed="2.342502"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.039175" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.024525" elapsed="0.014716"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.024233" elapsed="0.015079"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.039685" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.039557" elapsed="0.118272"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.158248" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.158104" elapsed="0.076703"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.235187" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.235051" elapsed="0.110055"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.362204" level="INFO">Current page contains text 'Sample task 1'.</msg>
+<arg>Sample task 1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.345372" elapsed="0.016913"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.381149" level="INFO">Current page contains text '20.11.2024'.</msg>
+<arg>20.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.362564" elapsed="0.018651"/>
+</kw>
+<kw name="Verify Task Count">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table//tbody</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.381777" elapsed="0.027722"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.419909" level="INFO">${row_count} = 1</msg>
+<var>${row_count}</var>
+<arg>xpath=//table//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.409644" elapsed="0.010295"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-20T20:03:36.420175" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.420047" elapsed="0.000173"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-11-20T20:03:36.381589" elapsed="0.038674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.420630" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.420484" elapsed="0.141134"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.562110" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.561953" elapsed="0.089454"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.651753" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.651635" elapsed="0.078984"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.743623" level="INFO">Current page contains text 'Sample task 2'.</msg>
+<arg>Sample task 2</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.730926" elapsed="0.012771"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.758811" level="INFO">Current page contains text '22.11.2024'.</msg>
+<arg>22.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.743898" elapsed="0.014981"/>
+</kw>
+<kw name="Verify Task Count">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table//tbody</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.759323" elapsed="0.017343"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.783884" level="INFO">${row_count} = 2</msg>
+<var>${row_count}</var>
+<arg>xpath=//table//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.776794" elapsed="0.007118"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-20T20:03:36.784133" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.784020" elapsed="0.000144"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-11-20T20:03:36.759146" elapsed="0.025072"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.784735" level="INFO">Clicking button 'xpath=//td[contains(text(), 'Sample task 1')]/following-sibling::td/button[text()='Delete']'.</msg>
+<arg>xpath=//td[contains(text(), 'Sample task 1')]/following-sibling::td/button[text()='Delete']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.784506" elapsed="0.090170"/>
+</kw>
+<kw name="Verify Task Count">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table//tbody</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.875105" elapsed="0.010920"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.892669" level="INFO">${row_count} = 1</msg>
+<var>${row_count}</var>
+<arg>xpath=//table//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.886152" elapsed="0.006547"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-20T20:03:36.892926" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.892812" elapsed="0.000145"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-11-20T20:03:36.874926" elapsed="0.018147"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.893410" level="INFO">Clicking button 'xpath=//td[contains(text(), 'Sample task 2')]/following-sibling::td/button[text()='Delete']'.</msg>
+<arg>xpath=//td[contains(text(), 'Sample task 2')]/following-sibling::td/button[text()='Delete']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.893281" elapsed="0.085486"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:36.995728" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.979297" elapsed="0.016533"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.979131" elapsed="0.016770"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-20T20:03:36.996075" elapsed="2.085687"/>
+</kw>
+<doc>Verify that the task count updates correctly after adding and removing tasks.</doc>
+<status status="PASS" start="2024-11-20T20:03:33.680868" elapsed="5.401163"/>
+</test>
+<test id="s1-t4" name="Testing Validation" line="79">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:39.083210" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:39.083024" elapsed="2.266218"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:41.368749" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.349730" elapsed="0.019090"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.349555" elapsed="0.019343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:41.369459" level="INFO">Typing text '' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.369117" elapsed="0.116386"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:41.486064" level="INFO">Typing text '' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.485752" elapsed="0.094750"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:41.580962" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.580759" elapsed="0.112049"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:41.703902" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.693671" elapsed="0.010302"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.693393" elapsed="0.010646"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-20T20:03:41.704206" elapsed="6.193092"/>
+</kw>
+<doc>Test adding an empty item to ensure validation.</doc>
+<status status="PASS" start="2024-11-20T20:03:39.082621" elapsed="8.814983"/>
+</test>
+<test id="s1-t5" name="Testing Duplicate Alert" line="90">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:47.898661" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:47.898512" elapsed="2.330125"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.243626" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.229101" elapsed="0.014619"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.228925" elapsed="0.014881"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.244174" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.244030" elapsed="0.155076"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.399625" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.399442" elapsed="0.082087"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.481912" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.481775" elapsed="0.103238"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.600631" level="INFO">Current page contains text 'Sample task 1'.</msg>
+<arg>Sample task 1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.585270" elapsed="0.015451"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.613598" level="INFO">Current page contains text '20.11.2024'.</msg>
+<arg>20.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.601048" elapsed="0.012627"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.614081" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.613935" elapsed="0.176436"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.790825" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.790691" elapsed="0.081435"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:50.872670" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.872541" elapsed="0.077228"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.950019" elapsed="0.011008"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-20T20:03:50.961225" elapsed="6.186195"/>
+</kw>
+<doc>Testing if the duplicate alert pops up</doc>
+<status status="PASS" start="2024-11-20T20:03:47.898148" elapsed="9.249551"/>
+</test>
+<test id="s1-t6" name="Testing Adding Of Duplicate" line="111">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:03:57.148835" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:03:57.148678" elapsed="2.559629"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-20T20:03:59.708757" level="INFO">${duplicate_count} = 0</msg>
+<var>${duplicate_count}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-20T20:03:59.708591" elapsed="0.000190"/>
+</kw>
+<kw name="Table Should Be Empty">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.044819" level="INFO">Current page contains element 'xpath=//p[text()='No todos']'.</msg>
+<arg>xpath=//p[text()='No todos']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:03:59.709183" elapsed="0.335704"/>
+</kw>
+<doc>Verifying that the Todo list is empty by checking for the "No todos" message.</doc>
+<status status="PASS" start="2024-11-20T20:03:59.708987" elapsed="0.335965"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.045296" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.045158" elapsed="0.231121"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.276807" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.276603" elapsed="0.103441"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.380591" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.380405" elapsed="0.107221"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.504628" level="INFO">Current page contains text 'Sample task 1'.</msg>
+<arg>Sample task 1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.487915" elapsed="0.016788"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.517927" level="INFO">Current page contains text '20.11.2024'.</msg>
+<arg>20.11.2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.505019" elapsed="0.012978"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:00.518380" level="INFO">${duplicate_count} = 1</msg>
+<var>${duplicate_count}</var>
+<arg>${duplicate_count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.518199" elapsed="0.000197"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.519024" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.518837" elapsed="0.174356"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.693464" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.693321" elapsed="0.097967"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.791592" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.791443" elapsed="0.080735"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.872307" elapsed="0.012258"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.884956" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.884738" elapsed="0.098864"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:00.984011" level="INFO">${duplicate_count} = 2</msg>
+<var>${duplicate_count}</var>
+<arg>${duplicate_count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.983761" elapsed="0.000277"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-11-20T20:04:00.518766" elapsed="0.465320"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:00.984462" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:00.984312" elapsed="0.191247"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.175813" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.175688" elapsed="0.117501"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.293568" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.293421" elapsed="0.112890"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.406498" elapsed="0.010806"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.417728" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.417551" elapsed="0.087929"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:01.505803" level="INFO">${duplicate_count} = 3</msg>
+<var>${duplicate_count}</var>
+<arg>${duplicate_count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.505618" elapsed="0.000204"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-20T20:04:00.984224" elapsed="0.521633"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.506105" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.506003" elapsed="0.186675"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.692962" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.692821" elapsed="0.093136"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.786208" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.786096" elapsed="0.078094"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.864335" elapsed="0.011584"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.876177" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.876053" elapsed="0.078887"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:01.955356" level="INFO">${duplicate_count} = 4</msg>
+<var>${duplicate_count}</var>
+<arg>${duplicate_count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.955165" elapsed="0.000210"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-20T20:04:01.505948" elapsed="0.449459"/>
+</iter>
+<var>${i}</var>
+<value>3</value>
+<status status="PASS" start="2024-11-20T20:04:00.518632" elapsed="1.436805"/>
+</for>
+<kw name="Verify Duplicate Count">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.972851" level="INFO">${row_count} = 4</msg>
+<var>${row_count}</var>
+<arg>xpath=//td[text()='${task_description}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.955846" elapsed="0.017037"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Found ${row_count} rows with description: ${task_description}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.972996" elapsed="0.000369"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.973512" elapsed="0.000184"/>
+</kw>
+<arg>Sample task 1</arg>
+<arg>${duplicate_count}</arg>
+<status status="PASS" start="2024-11-20T20:04:01.955666" elapsed="0.018094"/>
+</kw>
+<doc>Testing adding duplicates and verifying the correct number of duplicates exist in the table.</doc>
+<status status="PASS" start="2024-11-20T20:03:57.148241" elapsed="4.825690"/>
+</test>
+<test id="s1-t7" name="Testing Multiple Duplicates" line="146">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:01.974962" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-20T20:04:01.974824" elapsed="2.539119"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-20T20:04:04.514511" level="INFO">${duplicate_count_1} = 0</msg>
+<var>${duplicate_count_1}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-20T20:04:04.514314" elapsed="0.000227"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-20T20:04:04.514980" level="INFO">${duplicate_count_2} = 0</msg>
+<var>${duplicate_count_2}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-20T20:04:04.514862" elapsed="0.000135"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:04.515435" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:04.515264" elapsed="0.661603"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.177322" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.177150" elapsed="0.088616"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.266163" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.265996" elapsed="0.111384"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:05.377887" level="INFO">${duplicate_count_1} = 1</msg>
+<var>${duplicate_count_1}</var>
+<arg>${duplicate_count_1} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.377654" elapsed="0.000259"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.378308" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.378130" elapsed="0.192065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.570795" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.570549" elapsed="0.102968"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.674071" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.673915" elapsed="0.078261"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:05.753032" level="INFO">${duplicate_count_2} = 1</msg>
+<var>${duplicate_count_2}</var>
+<arg>${duplicate_count_2} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.752555" elapsed="0.000625"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.753656" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.753555" elapsed="0.192120"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:05.946091" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:05.945887" elapsed="0.096747"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.043161" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.042972" elapsed="0.088869"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.132020" elapsed="0.025611"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.158079" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.157858" elapsed="0.109675"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:06.268104" level="INFO">${duplicate_count_1} = 2</msg>
+<var>${duplicate_count_1}</var>
+<arg>${duplicate_count_1} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.267748" elapsed="0.000391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.268456" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.268261" elapsed="0.216241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.484849" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.484678" elapsed="0.095485"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.580517" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.580355" elapsed="0.085009"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.665515" elapsed="0.009772"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.675593" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.675429" elapsed="0.083196"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:06.759138" level="INFO">${duplicate_count_2} = 2</msg>
+<var>${duplicate_count_2}</var>
+<arg>${duplicate_count_2} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.758874" elapsed="0.000287"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-11-20T20:04:05.753501" elapsed="1.005696"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.759484" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.759370" elapsed="0.204082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:06.963893" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:06.963673" elapsed="0.098066"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.062048" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.061894" elapsed="0.086680"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.148808" elapsed="0.012400"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.161700" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.161409" elapsed="0.092667"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:07.254724" level="INFO">${duplicate_count_1} = 3</msg>
+<var>${duplicate_count_1}</var>
+<arg>${duplicate_count_1} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.254337" elapsed="0.000423"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.255243" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.254966" elapsed="0.204157"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.459429" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.459273" elapsed="0.091488"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.551195" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.551025" elapsed="0.081347"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.632526" elapsed="0.009445"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.642441" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.642158" elapsed="0.086805"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:07.729331" level="INFO">${duplicate_count_2} = 3</msg>
+<var>${duplicate_count_2}</var>
+<arg>${duplicate_count_2} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.729121" elapsed="0.000231"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-20T20:04:06.759305" elapsed="0.970084"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.729693" level="INFO">Typing text 'Sample task 1' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.729563" elapsed="0.192852"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:07.922967" level="INFO">Typing text '20.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>20.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:07.922679" elapsed="0.084091"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.007051" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.006915" elapsed="0.074642"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.081814" elapsed="0.007677"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.089987" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.089711" elapsed="0.084558"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:08.174581" level="INFO">${duplicate_count_1} = 4</msg>
+<var>${duplicate_count_1}</var>
+<arg>${duplicate_count_1} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.174395" elapsed="0.000204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.174763" level="INFO">Typing text 'Sample task 2' into text field 'id=todo_description_input'.</msg>
+<arg>id=todo_description_input</arg>
+<arg>Sample task 2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.174670" elapsed="0.238762"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.413885" level="INFO">Typing text '22.11.2024' into text field 'id=todo_date_input'.</msg>
+<arg>id=todo_date_input</arg>
+<arg>22.11.2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.413650" elapsed="0.111476"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.525574" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.525329" elapsed="0.103371"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The entry is identical with an existing todo. Do you want to keep it?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.628859" elapsed="0.007330"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.636478" level="INFO">Clicking button 'xpath=//button[text()='Keep it']'.</msg>
+<arg>xpath=//button[text()='Keep it']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.636337" elapsed="0.074286"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-20T20:04:08.711008" level="INFO">${duplicate_count_2} = 4</msg>
+<var>${duplicate_count_2}</var>
+<arg>${duplicate_count_2} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.710780" elapsed="0.000252"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-20T20:04:07.729498" elapsed="0.981576"/>
+</iter>
+<var>${i}</var>
+<value>3</value>
+<status status="PASS" start="2024-11-20T20:04:05.753366" elapsed="2.957750"/>
+</for>
+<kw name="Verify Duplicate Count">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.727381" level="INFO">${row_count} = 4</msg>
+<var>${row_count}</var>
+<arg>xpath=//td[text()='${task_description}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.711629" elapsed="0.015807"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Found ${row_count} rows with description: ${task_description}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.727622" elapsed="0.000428"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.728161" elapsed="0.000206"/>
+</kw>
+<arg>Sample task 1</arg>
+<arg>${duplicate_count_1}</arg>
+<status status="PASS" start="2024-11-20T20:04:08.711401" elapsed="0.017049"/>
+</kw>
+<kw name="Verify Duplicate Count">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-20T20:04:08.741543" level="INFO">${row_count} = 4</msg>
+<var>${row_count}</var>
+<arg>xpath=//td[text()='${task_description}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.729013" elapsed="0.012570"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Found ${row_count} rows with description: ${task_description}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.741728" elapsed="0.000380"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${row_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.742248" elapsed="0.000173"/>
+</kw>
+<arg>Sample task 2</arg>
+<arg>${duplicate_count_2}</arg>
+<status status="PASS" start="2024-11-20T20:04:08.728670" elapsed="0.013818"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-20T20:04:08.742657" elapsed="12.444842"/>
+</kw>
+<doc>Testing the adding of duplicates for two different tasks and verifying the correct number of duplicates</doc>
+<status status="PASS" start="2024-11-20T20:04:01.974462" elapsed="19.213419"/>
+</test>
+<status status="PASS" start="2024-11-20T20:03:22.773348" elapsed="58.415525"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="TodoListAssignment2">TodoListAssignment2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

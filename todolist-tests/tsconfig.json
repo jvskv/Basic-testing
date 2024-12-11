@@ -1,0 +1,15 @@
+/* Visit https://aka.ms/tsconfig to read more about this file */
+{
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "include": [
+    "./src/**/*.tsx", 
+    "./src/**/*.ts", 
+    "src/jest.config.ts"
+, "src/App.test.js", "src/TodoListAddRemove.test.js"  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "node_modules",
+    "coverage",
+    "build"
+  ]
+}

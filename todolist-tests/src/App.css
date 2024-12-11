@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  height: 3em;
+  line-height: 3em;
+}
