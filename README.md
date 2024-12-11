@@ -7,14 +7,14 @@ The primary goal of this project is to test the functionality and components of 
   **1. Jest and React Testing Library:**
    - Unit Testing: Ensures the functionality of individual components.
    - Simulates user interactions and verifies DOM elements.
-   - Examples of test cases [26]:
+   - Examples of test cases:
     -  Adding, deleting, and handling duplicate tasks.
     - Handling empty input fields.
     
  **2. Robot Framework:**
    - End-to-End Testing: Validates the complete functionality of the application from the user's perspective.
    - Uses the Selenium library to simulate browser interactions.
-   - Examples of test cases [28]:
+   - Examples of test cases:
      - Adding a new task.
      - Adding multiple tasks and validating them.
      - Verifying the list is empty initially.
